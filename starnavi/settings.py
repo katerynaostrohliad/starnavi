@@ -167,4 +167,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kateryna.ostrohliad@gmail.com'
 DEFAULT_FROM_EMAIL = 'kateryna.ostrohliad@gmail.com'
 SERVER_EMAIL = 'kateryna.ostrohliad@gmail.com'
-EMAIL_HOST_PASSWORD = 'QWRT1357mnbv'
+EMAIL_HOST_PASSWORD = 'password'
