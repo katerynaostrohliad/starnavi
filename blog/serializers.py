@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Post, CustomUser
+from .models import Post
+from django.contrib.auth.models import User
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -29,7 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
     username = serializers.PrimaryKeyRelatedField(many=True, queryset=Post.objects.all())
 
     class Meta:
-        model = CustomUser
+        model = User
         fields = ['username', 'name', 'email']
 
 

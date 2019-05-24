@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '94t5r=ix-o8lr17+z+r2ra!-hdy@ba-j2(6wgwgk-9+e-3mw8r'
+SECRET_KEY = '*************'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -53,7 +53,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 )
 
-AUTH_USER_MODEL = 'blog.CustomUser'
+
 
 REST_AUTH_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'rest_auth.registration.views.RegisterView',
@@ -61,9 +61,9 @@ REST_AUTH_SERIALIZERS = {
 }
 
 REST_FRAMEWORK = {
-    #'DEFAULT_PERMISSION_CLASSES': (
-     #   'rest_framework.permissions.IsAuthenticated',
-    #),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     ),
@@ -110,7 +110,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'blog',
         'USER': 'kateryna',
-        'PASSWORD': 'password', # paste your own password
+        'PASSWORD': '******', # paste your own password
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -159,7 +159,7 @@ STATIC_URL = '/static/'
 
 REST_SESSION_LOGIN = True
 
-ACCOUNT_EMAIL_VERIFICATION = True
+ACCOUNT_EMAIL_VERIFICATION = False
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
@@ -167,4 +167,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'kateryna.ostrohliad@gmail.com'
 DEFAULT_FROM_EMAIL = 'kateryna.ostrohliad@gmail.com'
 SERVER_EMAIL = 'kateryna.ostrohliad@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_PASSWORD = '*******'
